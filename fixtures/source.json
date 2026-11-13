@@ -1,0 +1,39 @@
+{
+  "kind": "transport-slots",
+  "data": {
+    "channels": [
+      {
+        "id": "c1",
+        "capacity": 2,
+        "aliases": [
+          "supplier-a",
+          "supplier-b"
+        ],
+        "proof": "local-registration-1"
+      },
+      {
+        "id": "c2",
+        "capacity": 1,
+        "aliases": [
+          "supplier-c"
+        ],
+        "proof": "local-registration-2"
+      }
+    ],
+    "sites": [
+      {
+        "id": "supplier-a",
+        "limit": 1
+      },
+      {
+        "id": "supplier-b",
+        "limit": 2
+      },
+      {
+        "id": "supplier-c",
+        "limit": 1
+      }
+    ],
+    "draining": false
+  }
+}

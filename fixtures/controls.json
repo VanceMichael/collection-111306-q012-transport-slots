@@ -1,0 +1,18 @@
+{
+  "shrink": {
+    "channels": [
+      {
+        "id": "c1",
+        "capacity": 1,
+        "aliases": [
+          "supplier-a",
+          "supplier-b"
+        ],
+        "proof": "local-registration-1"
+      }
+    ]
+  },
+  "drain": {
+    "draining": true
+  }
+}

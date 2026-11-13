@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile,mkdtemp,rm} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import * as domain from '../src/domain.mjs';
+const data=JSON.parse(await readFile(new URL('../fixtures/source.json',import.meta.url))).data;
+const {topology,siteLimit,preview}=domain;
+test('资料对象的领域边界和原始预览',async()=>{assert.equal(siteLimit(data,'supplier-a'),1);
+assert.throws(()=>siteLimit(data,'not-a-site'));
+assert.deepEqual(topology(data)[0].aliases,['supplier-a','supplier-b']);});
